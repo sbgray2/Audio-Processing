@@ -44,7 +44,7 @@ Both models use the same input representation (mel spectrograms with 64 mel band
 ---
 
 
-## 🧪 Architectural Motivation
+## Architectural Motivation
 
 ### CNN (Baseline)
 The CNN architecture was chosen for its efficiency and success in earlier ESC-50 tasks. With two convolutional layers followed by max pooling and a dense layer, it provides a lightweight and effective model for local pattern recognition in mel spectrograms. Its simplicity makes it suitable for training on limited compute, and its inductive bias for translation invariance aligns well with time-frequency features.
