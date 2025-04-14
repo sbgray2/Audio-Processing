@@ -1,11 +1,11 @@
 
-# ESC-10 Environmental Sound Classification 🎧🧠
+# ESC-10 Environmental Sound Classification 
 
 This project compares two deep learning models — a **Convolutional Neural Network (CNN)** and a **Transformer-based classifier** — on the ESC-10 environmental audio dataset. Both models are trained on log-mel spectrograms for 200 epochs and evaluated for multiclass classification performance.
 
 ---
 
-## 📦 Dataset: [ESC-10](https://github.com/karoldvl/ESC-50)
+##  Dataset: [ESC-10](https://github.com/karoldvl/ESC-50)
 
 ESC-10 is a 10-class subset of the ESC-50 dataset consisting of 5-second clips from 10 categories:
 
@@ -15,15 +15,15 @@ chainsaw, clock_tick, crackling_fire, crying_baby, dog, helicopter, rain, rooste
 
 ---
 
-## 🧠 Model Architectures
+##  Model Architectures
 
-### 🌀 Convolutional Neural Network (CNN)
+###  Convolutional Neural Network (CNN)
 - 2 convolutional layers
 - Max pooling + ReLU
 - Fully connected layer
 - Dropout
 
-### 🔁 Transformer-Based Model
+###  Transformer-Based Model
 - Linear projection of spectrogram
 - Positional encoding
 - Multi-head self-attention (2 layers)
@@ -33,12 +33,12 @@ Both models use the same input representation (mel spectrograms with 64 mel band
 
 ---
 
-## 🏁 Training
+##  Training
 
 - **Epochs**: 200
 - **Optimizer**: Adam
 - **Loss**: CrossEntropy
-- **Device**: CPU (both models)
+- **Device**: cuda (both models)
 - **Batch size**: 8
 
 ---
@@ -53,9 +53,9 @@ The CNN architecture was chosen for its efficiency and success in earlier ESC-50
 Transformers were introduced to explore longer-term dependencies in the audio signal, leveraging self-attention to dynamically weight relevant portions of the clip. Unlike CNNs, which rely on fixed local filters, the Transformer architecture can relate distant sound events — useful for clips where acoustic events are spaced or vary in duration (e.g., sirens, waves). The positional encoding preserves temporal structure while allowing global reasoning, leading to improved generalization.
 
 
-## 📊 Evaluation Results
+## Evaluation Results
 
-### 🧠 Transformer (200 Epochs)
+###  Transformer (200 Epochs)
 - **Accuracy**: 56%
 - **Macro F1-score**: 0.57
 
@@ -77,7 +77,7 @@ crackling_fire       1.00      0.75      0.86
 
 ---
 
-### 🌀 CNN (200 Epochs)
+###  CNN (200 Epochs)
 - **Accuracy**: 41%
 - **Macro F1-score**: 0.39
 
@@ -99,7 +99,7 @@ crackling_fire       0.71      0.62      0.67
 
 ---
 
-## 📈 Summary
+##  Summary
 
 | Model       | Accuracy | Macro F1 | Strengths                                      |
 |-------------|----------|----------|------------------------------------------------|
@@ -108,7 +108,7 @@ crackling_fire       0.71      0.62      0.67
 
 ---
 
-## 🛠️ How to Run
+##  How to Run
 
 ### 1. Install dependencies
 ```bash
@@ -137,7 +137,7 @@ python esc10_transformer_pipeline.py
 
 ---
 
-## 📁 Files
+##  Files
 
 - `esc10_cnn_pipeline.py` – CNN architecture + training loop
 - `esc10_transformer_pipeline.py` – Transformer classifier + evaluation
@@ -148,7 +148,7 @@ python esc10_transformer_pipeline.py
 
 ---
 
-## 🔭 Future Work
+##  Future Work
 
 - Add augmentation (pitch/time shift, background noise)
 - Try pretrained models (YAMNet, PANNs)
@@ -156,7 +156,7 @@ python esc10_transformer_pipeline.py
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - ESC-50 by Karol J. Piczak  
 - Torchaudio + Librosa  
