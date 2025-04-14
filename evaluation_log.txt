@@ -1,0 +1,19 @@
+Classification Report:
+                precision    recall  f1-score   support
+
+      chainsaw       0.00      0.00      0.00         8
+    clock_tick       0.43      0.38      0.40         8
+crackling_fire       0.71      0.62      0.67         8
+   crying_baby       0.45      0.62      0.53         8
+           dog       0.25      0.12      0.17         8
+    helicopter       0.22      0.25      0.24         8
+          rain       0.42      0.62      0.50         8
+       rooster       1.00      0.25      0.40         8
+     sea_waves       0.38      0.75      0.50         8
+      sneezing       0.44      0.50      0.47         8
+
+      accuracy                           0.41        80
+     macro avg       0.43      0.41      0.39        80
+  weighted avg       0.43      0.41      0.39        80
+
+Confusion matrix saved to confusion_matrix.png
