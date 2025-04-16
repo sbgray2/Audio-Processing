@@ -1,7 +1,7 @@
 
 # ESC-10 Audio Classification Project
 
-This project explores multiple deep learning architectures for classifying 10 types of environmental sounds from the ESC-10 subset of the ESC-50 dataset. The models evaluated include:
+This project explores multiple deep learning architectures for classifying 10 types of environmental sounds from the ESC-10 subset of the ESC-50 dataset. The models evaluated are:
 
 - A CNN-based classifier trained on spectrograms
 - A Transformer-based classifier trained on spectrograms
